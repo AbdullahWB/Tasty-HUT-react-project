@@ -1,6 +1,10 @@
 import React from 'react';
+import Cart from '../Cart/Cart';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
+    const {meals} = useLoaderData();
+    console.log(meals)
     return (
         <div>
             <div className='w-full h-[650px] relative'>
@@ -18,6 +22,17 @@ const Home = () => {
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+            <div className='container mx-auto mt-[120px]'>
+                <h1 className='text-center text-4xl font-bold'>Your Favourite Food</h1>
+                <div className='grid grid-cols-2 gap-7'>
+                {
+                    meals.map(meal => <Cart
+                        key={meal.idMeal}
+                        meal={meal}
+                    ></Cart>)
+                }
                 </div>
             </div>
         </div>
