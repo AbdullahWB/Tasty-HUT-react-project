@@ -26,7 +26,7 @@ const Header = () => {
                     </div>
                     <a className="btn btn-ghost normal-case text-2xl font-extrabold ">Tasty HUT</a>
                 </div>
-                <div className="navbar-end lg:mr-10 md:mr-10 lg:mr-[150px]">
+                <div className="navbar-end md:mr-10 lg:mr-[150px]">
                     <a className="btn btn-primary text-black text-xl font-bold">Sign Up</a>
                 </div>
             </div>
